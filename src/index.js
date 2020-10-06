@@ -1,5 +1,7 @@
 import initTilt from './js/tilt';
 import initSr from './js/sr';
+import MyResume from './assets/resume.pdf';
+
 
 import './style/main.scss';
 
@@ -20,6 +22,12 @@ $('a[href^="#"]').on('click', function(event) {
 }
 );
 
-
-initSr();
+function addResume(MyResume){
+  const elements = document.getElementsByClassName('.cta-btn--resume');
+  for(let el of elements){
+    el.href = url(MyResume);
+  }
+}initSr();
 initTilt();
+addResume();
+
