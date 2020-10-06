@@ -1,8 +1,9 @@
 import initTilt from './js/tilt';
 import initSr from './js/sr';
-import MyResume from './assets/resume.docx';
+import MyResume from './assets/resume.pdf';
 
 import './style/main.scss';
+
 
 $('a[href^="#"]').on('click', function(event) {
   var target = $(this.getAttribute('href'));
@@ -17,7 +18,8 @@ $('a[href^="#"]').on('click', function(event) {
         1000
       );
   }
-});
+}
+);
 
 function addResume(MyResume){
   const elements = document.getElementsByClassName('.cta-btn--resume');
